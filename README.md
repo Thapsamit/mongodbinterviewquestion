@@ -35,6 +35,12 @@ BSON is lightweight: This makes it possible for a large amount of data to be sto
 - additonal data types
 
 
+## Covered Query:-
 
+Covered Query
+- A covered query is a query that can be satisfied entirely using an index and does not have to examine any documents. An index  covers
+ a query when all of the following apply:
+  - all the fields in the query are part of an index, and
+  - all the fields returned in the results are in the same index.
 
 
