@@ -43,4 +43,33 @@ Covered Query
   - all the fields in the query are part of an index, and
   - all the fields returned in the results are in the same index.
 
+## What is the importance of profiler in MongoDB?
+- MongoDB contains the database profiler that shows the performance characteristics of every operation against the database. Through the profiler, we can identify the queries that are slower than they should be and use this data to determine when we require an index.
+
+## Join
+- can do by $lookup operator to perform join with a collection.
+
+## Some Commands:-
+- **mongodump** - used to create a mongodb backup
+- **mongorestore** - used to restore the data from backup 
+
+## Aggregation:-
+- $group - used to aggregate the results.
+
+## Explain Capped Collection?
+- In MongoDB, the Capped collection is a special kind of collection. This indicates that in this collection, we can restrict the collection size. Syntax of Capped - - - Collection is as follows:
+  - Collection_Name: This field is the collection name that we create as the capped collection.
+  - Capped: Capped is a boolean field; it is true if we create a capped collection. By default, its value is false.
+  - auto indexed: It is a boolean flag that we use for auto-indexing. If this flag is true, indexes will be created automatically. If the flag is false, indexes will not be created automatically.
+  - Size: Size is the parameter that represents the maximum amount of documents in bytes. It is the required field in the context of capped collections.
+  - Max: Max is the parameter that represents the highest number of documents that permit the collection. 
+
+## Save vs insert:-
+- save - when having an id specified it replaces the documents with given id with the new document. when not provided id it just do simple insertion.
+- insert - when having an id specified it gives an error as id already exists, while without id it simply do an insertion.
+
+## Problem with find():-
+- It will keep on searching the entire collections even if the document match has been found.
+
+
 
